@@ -1,6 +1,6 @@
 function addTask()
 {
-    console.log("working");
+    // console.log("working");
     var fixed=document.getElementById("fixed");
     if(fixed.style.display=="block")
         fixed.style.display="none";
@@ -23,8 +23,8 @@ function check()
         return false;
     var todo=document.getElementById("todo");
     const element_todo = document.createElement('div');
-    element_todo.setAttribute('id' , 'k++');
-    element_todo.setAttribute('draggable' , 'true');
+    element_todo.setAttribute('id' , k++);
+    element_todo.setAttribute('draggable' , true);
     element_todo.classList.add('task');
     element_todo.style.border="1px solid #0dcaf0";
     var front=document.createElement('p');
@@ -63,7 +63,7 @@ function check()
     // element_todo.appendChild(details);
     element_todo.appendChild(prior);
 
-    console.log(title.value);
+    // console.log(title.value);
     front.innerText=title.value;
 
 
@@ -82,32 +82,77 @@ function check()
 }
 var drag;
 document.addEventListener('dragstart', e=>{
-    console.log("drag start");
+    // console.log("drag start");
     var temp =e.target.id;
     drag=e.target;
     setTimeout(() =>{
         e.target.style.display="none";
     },0);
-    console.log(temp);
+    // console.log(temp);
     
 })
 document.addEventListener('dragend', e=>{
-    console.log("drag end");
+    // console.log("drag end");
     e.target.style.display="block";
 })
 var box=document.getElementsByClassName('box');
-for( var temp of box)
-{
+// for( var temp of box)
+// {
    
-    temp.addEventListener('drop' , e=>{
-        console.log("drop");
-        e.target.append(drag);
-    })
-    temp.addEventListener('dragover',e=>{
-        console.log("drop");
-        e.preventDefault();
-    })
-}
+//     temp.addEventListener('drop' , e=>{
+//         // console.log("drop");
+//         console.log(e);
+//         console.log(e.target.class);
+//         if(e.target=="p#front")
+//             e.target.parent.append(drag);
+//         else
+//             e.target.append(drag);
+//     })
+//     temp.addEventListener('dragover',e=>{
+//         // console.log("drop");
+//         e.preventDefault();
+//     })
+// }
+var todo = document.getElementById("todo");
+todo.addEventListener('drop' , e=>{
+    // console.log("drop");
+    console.log(e);
+    todo.append(drag);
+})
+todo.addEventListener('dragover',e=>{
+    // console.log("drop");
+    e.preventDefault();
+})
+var inProg = document.getElementById("inProg");
+inProg.addEventListener('drop' , e=>{
+    // console.log("drop");
+    console.log(e);
+    inProg.append(drag);
+})
+inProg.addEventListener('dragover',e=>{
+    // console.log("drop");
+    e.preventDefault();
+})
+var testing = document.getElementById("testing");
+testing.addEventListener('drop' , e=>{
+    // console.log("drop");
+    console.log(e);
+    testing.append(drag);
+})
+testing.addEventListener('dragover',e=>{
+    // console.log("drop");
+    e.preventDefault();
+})
+var done = document.getElementById("done");
+done.addEventListener('drop' , e=>{
+    // console.log("drop");
+    console.log(e);
+    done.append(drag);
+})
+done.addEventListener('dragover',e=>{
+    // console.log("drop");
+    e.preventDefault();
+})
 // for()
 
 document.addEventListener('click', e=>{
@@ -117,7 +162,7 @@ document.addEventListener('click', e=>{
     // xhr.onload = function(){
 
     var temp =e.target.id;
-    console.log(temp);
+    // console.log(temp);
     if(temp == 'del')
     {
         var parent=e.target.parentElement;
