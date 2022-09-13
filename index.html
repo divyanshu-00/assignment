@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kanban Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+
+    
+</head>
+
+<body>
+    <div class="">
+        <!-- <div id="add">
+            <button type="button" class="btn btn-info" onclick="addTask()">Add New Task</button>
+            
+        </div> -->
+    </div>
+    <div id="fixed">
+        <form action="index.html" id="form" onsubmit="return check()">
+            <input type="text" name="title" id="title" class="form_field" placeholder="Enter the Title of the task">
+            <div>
+            <input type="radio" name="imp" id="imp" value="important">
+            <label for="imp">High priority</label>
+        </div>
+            <div>
+            <input type="radio" name="imp" id="imp2" value="not_important">
+            <label for="imp2">Low priority</label>
+        </div>
+            <!-- <textarea name="add_task" id="add_task" class="textarea" placeholder="write your task here"></textarea> -->
+          
+          
+            <button type="submit" class="btn btn-outline-info form_field" >Add this Task</button>
+                
+        </form>
+    </div>
+    <div class="frame">
+        <div id="todo" class="box">
+            <div id="add">
+                <button type="button" class="btn btn-info" onclick="addTask()">Add New Task</button>
+                
+            </div>
+            <h2>To Do</h2>
+            <!-- <div class="task" id="one">
+                <p id="front" contenteditable="true">At this time, the support is: Chrome, Opera</p>
+                <p id="back" class="">This is detail</p>        
+                <button type="button" class="btn btn-outline-info mod_btn btn-sm" id="shift" >In Progress</button>
+               
+                <button type="button" class="btn btn-outline-info mod_btn btn-sm" id="del" >Delete task</button>
+
+                <div id="prior"></div>
+            </div>  -->
+            
+        </div>
+       
+        <div id="inProg" class="box">
+            <h2>In Progress</h2>
+            
+        </div>
+        <div id="testing" class="box">
+            <h2>Testing</h2>
+            
+        </div>
+        <div id="done" class="box">
+            <h2>Completed</h2>
+            
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

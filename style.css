@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: min-content;
+    margin: auto;
+}
+.frame{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid #0dcaf0 ; */
+    /* max-width: fit-content; */
+    width: min-content;
+    max-height: fit-content;
+    margin: auto;
+}
+
+.box{
+    background-color: rgb(208, 240, 250);
+    /* display: none; */
+    border: 2px solid #0dcaf0;
+    border-radius: 5px;
+    margin: 20px 10px;
+    min-width: 300px;
+    min-height: 400px;
+}
+h2{
+    color: #0dcaf0;
+    width: fit-content;
+    margin: auto;
+}
+.task{
+    display: block;
+    position: relative;
+    border: 1px solid #0dcaf0;
+    min-height: 80px;
+    height: fit-content;
+    width: 328px;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    z-index: 0.2;
+}
+#add{
+    height: fit-content;
+    margin: 10px 10px;
+    
+}
+#add button{
+    color: white;
+    width: 275px;
+    height: 50px;
+}
+#fixed{
+    z-index: 1;;
+    position: fixed;
+    top: 100px;
+    left: 370px;
+    display: none;
+    border: 2px solid #0dcaf0;
+    border-radius: 5px;
+    background-color: white;
+    height: 300px;
+    width: fit-content;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    margin: 10px;
+    width: fit-content;
+}
+.form_field{
+    border: 1px solid #0dcaf0;
+    border-radius: 5px;
+    margin: 20px 10px;
+    width: 500px;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+#form div{
+    margin: 0px 10px;
+}
+/* #add_task{
+    margin:20px 10px; 
+    padding: 10px;
+    min-height: 80px;
+} */
+#front{
+    height: fit-content;
+    /* width: fit-content; */
+    margin: 5px 10px;
+    margin-bottom: 15px;
+    /* justify-content: left; */
+}
+/* #back{
+    display: none;
+    border: 1px solid greenyellow;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 325px;
+
+} */
+.mod_btn{
+    margin: 5px;
+    
+
+}
+#prior{
+    /* border: 1px solid rgb(91, 95, 85); */
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+
+@media screen and (width: 980px){
+    .frame {
+       flex-direction: column;
+    }
+    #fixed{
+        left: 220px;
+        
+        width: fit-content;
+        /* width: 100vw; */
+    }
+ 
+}
+
+/* #addTask {
+
+} */
