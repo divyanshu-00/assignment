@@ -13,9 +13,7 @@ function check()
     // const xhr = new XMLHttpRequest();
     // xhr.open('POST', 'https://dummy_server', true);   
     // xhr.setRequestHeader("Content-type","json");
-    // xhr.onload = function(){     
-
-
+    // xhr.onload = function(){    
     var title=document.getElementById("title");
     var fixed=document.getElementById("fixed");
     fixed.style.display="none";
